@@ -21,6 +21,7 @@ from flytekitplugins.spark import DatabricksV2 as Databricks
 # %%
 @task(
     task_config=Databricks(
+        databricks_instance="databricks.example.com"
         spark_conf={
             "spark.driver.memory": "1000M",
             "spark.executor.memory": "1000M",
